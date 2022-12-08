@@ -56,4 +56,9 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
+var listener = app.listen(process.env.PORT, () => {
+  console.log('listening on port: ', process.env.PORT)
+})
+
+
 module.exports = app;
